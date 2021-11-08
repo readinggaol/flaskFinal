@@ -27,12 +27,52 @@ img{
     grid-template-columns: 1;
     height: 100vh;
 }
+/* grids */
 #body{
-	background-color: lightcoral;
+	background-color: #AAC1C0;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 60px 50%;
+	grid-template-areas: "title title" "form blurb";
+}
+#body h1{
+	grid-area: title;
+	text-align: center;
+	margin:  0;
+	padding: 15px 0 0 0;
+}
+#body p{
+	grid-area: blurb;
+}
+#user_form{
+	grid-area: form;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 50px 200px;
 }
 #upload_form div{
 	margin-bottom: 30px;
 }
+#sticker{
+	font-weight: 700;
+	font-size: 1.5em;
+	padding-left: 10px;
+}
+#login{
+	padding: 0 15px 10px 10px;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 20% 20% 20% 20% 20%;
+}
+#login input{
+	margin-bottom: .5em;
+}
+.error{
+	color:  red;
+	padding-left: 10px;
+}
 #footer{
 	text-align: center;
+	background-color: #383F3F;
+	color:  white;
 }

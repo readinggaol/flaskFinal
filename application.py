@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 import db as db
+import Book
 
 app = Flask(__name__)
 app.config["UPLOAD_PATH"] = "static/images"
@@ -11,7 +12,8 @@ def index():
 
 @app.route("/collection")
 def collection():
-    books = db.getBooks()
+    myList = db.getBooks()
+    books = "test"
     return render_template("collection.html", collection=books)
 
 @app.route("/upload")

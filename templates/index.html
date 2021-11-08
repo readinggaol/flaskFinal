@@ -1,4 +1,6 @@
 {% extends "layout.html" %}
+{%block scripting %} <script src="static/scripts/index.js"></script>{% endblock%}
+
 
 {% block title %}Home{% endblock %}
 
@@ -12,14 +14,17 @@ to upload or delete.
 {% endblock %}
 
 {% block business %}
+<div id="user_form">
     <label for="login" id="sticker">User Login</label>
     <form id="login" name="login">
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username">
-        <label for="password">Password</label>
-        <input type="text" id="password" name="password">
-        <button type="button">Submit</button>
+        <label for="username">Username<span class="error">*</span></label>
+        <input type="text" id="username" name="username" placeholder="Enter username here">
+        <label for="password">Password<span class="error">*</span></label>
+        <input type="text" id="password" name="password" placeholder="Enter password here">
+        <button type="button" id="login_button">Submit</button>
     </form>
+</div>
+
 {% endblock %}
 
 

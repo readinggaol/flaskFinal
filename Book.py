@@ -8,3 +8,6 @@ class Book:
         self.page_count = page_count
         self.genre = genre
         self.image_path = image_path
+
+    def __str__(self):
+        return self.title + ": " + self.author_last + ", " + self.author_first
