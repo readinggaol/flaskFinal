@@ -2,3 +2,37 @@ img{
 	width: 300px;
 	height: 300px;
 }
+#navbar{
+	background-color: #7A716F;
+	text-align: center;
+	font-family: sans-serif;
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+}
+#navbar a{
+	text-decoration: none;
+	color: black;
+	border-radius: .5em;
+	font-size: 1.5em;
+	padding-top: 40px;
+}
+#navbar a:hover{
+	background-color: grey;
+	color:  white;
+}
+#container{
+    background-color: lightblue;
+    display:  grid;
+    grid-template-rows: 10% 85% 5%;
+    grid-template-columns: 1;
+    height: 100vh;
+}
+#body{
+	background-color: lightcoral;
+}
+#upload_form div{
+	margin-bottom: 30px;
+}
+#footer{
+	text-align: center;
+}
