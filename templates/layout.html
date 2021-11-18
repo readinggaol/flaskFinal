@@ -17,13 +17,13 @@
         <div id="body">
             <h1>{% block heading %}{% endblock %}</h1>
 
-            <p id="blurb">{% block body %}{% endblock %}</p>
+            {% block body %}{% endblock %}
 
             {% block business %}{% endblock %}
         </div>
-        <div id="footer">
-            <p>This is the footer</p>
-        </div>
+<!--        <div id="footer">-->
+<!--            <p>This is the footer</p>-->
+<!--        </div>-->
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     {%block scripting %}{% endblock%}

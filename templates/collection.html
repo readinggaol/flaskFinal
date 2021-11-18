@@ -4,8 +4,18 @@
 {% block heading %}COLLECTION{% endblock %}
 
 {% block body %}
+{% endblock %}
 
-{{ collection }}
-
-
+{% block business %}
+<div id="collection_box">
+    {% for book in collection %}
+    <div id="book">
+        <h2>{{book[0]}} ({{book[3]}})</h2>
+        <p>{{book[1]}} {{book[2]}}</p>
+        <img src={{book[6]}}>
+        <p>Pages: {{book[4]}}</p>
+        <p>Genre: {{book[5]}} </p>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}

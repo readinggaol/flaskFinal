@@ -12,9 +12,11 @@ def index():
 
 @app.route("/collection")
 def collection():
-    myList = db.getBooks()
-    books = str(myList[0])
-    return render_template("collection.html", collection=books)
+    myBooks = db.getBooks()
+    myList = []
+    for book in myBooks:
+        myList.append(book.break_book())
+    return render_template("collection.html", collection=myList)
 
 @app.route("/upload")
 def upload():

@@ -1,3 +1,8 @@
+body{
+	margin: 0;
+	background-color: #AAC1C0;
+}
+
 img{
 	width: 300px;
 	height: 300px;
@@ -26,14 +31,16 @@ img{
     grid-template-rows: 10% 85% 5%;
     grid-template-columns: 1;
     height: 100vh;
+    width:  100vw;
 }
 /* grids */
 #body{
 	background-color: #AAC1C0;
-	display: grid;
+	margin: 0;
+	/*display: grid;
 	grid-template-columns: 50% 50%;
 	grid-template-rows: 60px 50%;
-	grid-template-areas: "title title" "form blurb";
+	grid-template-areas: "title title" "form blurb";*/
 }
 #body h1{
 	grid-area: title;
@@ -71,8 +78,26 @@ img{
 	color:  red;
 	padding-left: 10px;
 }
-#footer{
+#collection_box{
+	display: grid;
+	grid-gap: 10px;
+	justify-items: center;
+	grid-template-rows: auto;
+	grid-template-columns: 50% 50%;
+}
+#book{
+	width: 100%;
+	justify-self: center;
+	border-radius: 15px;
+	background-color: #6B7575;
+	text-align: center;
+}
+#book img{
+	width: 200px;
+	height: 300px;
+}
+/*#footer{
 	text-align: center;
 	background-color: #383F3F;
 	color:  white;
-}
+}*/
