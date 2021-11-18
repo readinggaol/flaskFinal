@@ -13,7 +13,7 @@ def index():
 @app.route("/collection")
 def collection():
     myList = db.getBooks()
-    books = "test"
+    books = str(myList[0])
     return render_template("collection.html", collection=books)
 
 @app.route("/upload")

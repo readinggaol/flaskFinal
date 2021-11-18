@@ -8,9 +8,7 @@ def getBooks():
     books = []
     try:
         with closing(conn.cursor()) as c:
-            sql = "SELECT title, author_first, author_last," \
-                  "publish_year, page_count, genre, image_path FROM" \
-                  "Books"
+            sql = "SELECT title, author_first, author_last, publish_year, page_count, genre, image_path FROM Books"
             c.execute(sql)
             results = c.fetchall()
             for result in results:
