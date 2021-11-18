@@ -2,7 +2,6 @@ body{
 	margin: 0;
 	background-color: #AAC1C0;
 }
-
 img{
 	width: 300px;
 	height: 300px;
@@ -26,7 +25,6 @@ img{
 	color:  white;
 }
 #container{
-    background-color: lightblue;
     display:  grid;
     grid-template-rows: 10% 85% 5%;
     grid-template-columns: 1;
@@ -37,10 +35,6 @@ img{
 #body{
 	background-color: #AAC1C0;
 	margin: 0;
-	/*display: grid;
-	grid-template-columns: 50% 50%;
-	grid-template-rows: 60px 50%;
-	grid-template-areas: "title title" "form blurb";*/
 }
 #body h1{
 	grid-area: title;

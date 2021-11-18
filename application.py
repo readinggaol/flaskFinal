@@ -12,7 +12,7 @@ def index():
 
 @app.route("/collection")
 def collection():
-    myBooks = db.getBooks()
+    myBooks = db.get_books()
     myList = []
     for book in myBooks:
         myList.append(book.break_book())
