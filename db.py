@@ -26,8 +26,7 @@ def add_book(book):
     conn.row_factory = sqlite3.Row
     try:
         with closing(conn.cursor()) as c:
-            sql = "INSERT INTO Books (title, author_first, author_last, publish_year, page_count, genre, image_path " \
-                  "VALUES (?, ?, ?, ?, ?, ?, ? "
+            sql = "INSERT INTO Books (title, author_first, author_last, publish_year, page_count, genre, image_path) VALUES (?, ?, ?, ?, ?, ?, ? )"
             c.execute(sql, (book[0], book[1], book[2], book[3], book[4], book[5], book[6]))
             conn.commit()
     except sqlite3.OperationalError as e:

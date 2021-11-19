@@ -1,6 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
+import os
 import db as db
-import Book
 
 app = Flask(__name__)
 app.config["UPLOAD_PATH"] = "static/images"
@@ -18,8 +18,16 @@ def collection():
         myList.append(book.break_book())
     return render_template("collection.html", collection=myList)
 
-@app.route("/upload")
+@app.route("/upload", methods=["GET", "POST"])
 def upload():
+    if request.method == "POST":
+        book = [request.values["title"], request.values["first"], request.values["last"],
+                request.values["year"], request.values["pages"], request.values["genre"], request.files["file"].filename]
+        db.add_book(book)
+        if request.files:
+            image = request.files["file"]
+            image.save(os.path.join(app.config["UPLOAD_PATH"], image.filename))
+            return redirect(request.url)
     return render_template("upload.html")
 
 @app.route("/delete")
