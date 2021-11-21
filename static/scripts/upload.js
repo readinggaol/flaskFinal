@@ -7,7 +7,76 @@ const zeroErrors = () => {
 	}
 }
 
+const takePicture = (width, height) => {
+	const context = canvas.getContext("2d");
+	if(width && height){
+		canvas.width = width;
+		canvas.height = height;
+		context.drawImage(video, 0, 0, width, height);
+
+	}
+}
+
 $(document).ready( () => {
+	//GLOBAL VARIABLES
+	let width = 500;
+	let height = 0;
+	let streaming = false;
+
+	const video = document.getElementById("video");
+	const canvas = document.getElementById("canvas");
+	const photos = $("#photo_container");
+	const photoButton = $("#video_button");
+
+	//TURN CAMERA ON/OFF DEPENDING ON CHECKBOX
+	$("#flexCheckDefault").change( (evt) => {
+		if($("#flexCheckDefault").is(":checked")){
+			//reset the file input
+			$("#photo_button").attr("disabled", false);
+			$("#formFile").attr("disabled", true);
+			$("#formFile").val("");
+			navigator.mediaDevices.getUserMedia({video: true, audio: false})
+				.then( (stream) => {
+					//link to video source
+					video.srcObject = stream;
+					//play the video
+					video.play();
+				})
+				.catch( (error) => {
+					console.log(error)
+				})
+
+				// // Play when ready
+				video.addEventListener('canplay', function(e) {
+				if(!streaming) {
+					// Set video / canvas height --> use formula for aspect ratio
+					height = video.videoHeight / (video.videoWidth / width);
+
+					$(video).attr('width', width);
+					$(video).attr('height', height);
+					$(canvas).attr('width', width);
+					$(canvas).attr('height', height);
+
+					streaming = true;
+					}
+				}, false);
+		}else{
+			$("#formFile").attr("disabled", false);
+			$("#photo_button").attr("disabled", true);
+			//trying to properly turn the camera off (not quite working yet)
+			$("#video").attr("src", "");
+			video.srcObject = null;
+		}	
+	});
+
+	$("#photo_button").click( (evt) => {
+		console.log("test");
+		takePicture(width, height);
+		evt.preventDefault();
+	});
+
+	
+	
 	$("#submit").click( (evt) => {
 		zeroErrors();
 		//Variables

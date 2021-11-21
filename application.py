@@ -10,6 +10,7 @@ app.config["UPLOAD_PATH"] = "static/images"
 def index():
     return render_template("index.html")
 
+
 @app.route("/collection")
 def collection():
     myBooks = db.get_books()
@@ -17,6 +18,7 @@ def collection():
     for book in myBooks:
         myList.append(book.break_book())
     return render_template("collection.html", collection=myList)
+
 
 @app.route("/upload", methods=["GET", "POST"])
 def upload():
@@ -29,6 +31,7 @@ def upload():
             image.save(os.path.join(app.config["UPLOAD_PATH"], image.filename))
             return redirect(request.url)
     return render_template("upload.html")
+
 
 @app.route("/delete", methods=["GET", "POST"])
 def delete():
