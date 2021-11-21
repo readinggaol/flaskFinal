@@ -34,8 +34,10 @@ def upload():
 def delete():
     if request.method == "POST":
         target_book = request.form.get("books")
-        print(target_book)
-        db.delete_book(str(target_book))
+        filename = db.get_file_path(target_book)
+        print(filename)
+        db.delete_book(target_book)
+        os.remove(os.path.join(app.config['UPLOAD_PATH'], filename))
     myBooks = db.get_books()
     myList = []
     for book in myBooks:

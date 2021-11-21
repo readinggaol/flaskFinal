@@ -38,7 +38,19 @@ def delete_book(name):
     try:
         with closing(conn.cursor()) as c:
             sql = "DELETE FROM Books WHERE title=?"
-            c.execute(sql, (str(name),))
+            c.execute(sql, (name,))
             conn.commit()
+    except sqlite3.OperationalError as e:
+        print("Error reading database -", e)
+
+def get_file_path(name):
+    conn = sqlite3.connect("books.sqlite")
+    conn.row_factory = sqlite3.Row
+    try:
+        with closing(conn.cursor()) as c:
+            sql = "SELECT image_path FROM Books WHERE title=?"
+            c.execute(sql, (name,))
+            results = c.fetchall()
+            return results[0][0]
     except sqlite3.OperationalError as e:
         print("Error reading database -", e)
