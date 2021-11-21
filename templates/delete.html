@@ -1,11 +1,32 @@
 {% extends "layout.html" %}
-
+{%block scripting %} <script src="static/scripts/delete.js"></script>{% endblock%}
 {% block heading %}
 {% endblock %}
 
 {% block body %}
+<h1>DELETE</h1>
+<label for="delete_book" id="sticker">Choose a book</label>
+<form method="POST" id="delete_book" name="delete_book">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <div class="dropdown">
+                    <select name="books" class="form-select" id="books_dropdown">
+                        <option value="" disabled selected>Select</option>
+                        {% for book in collection %}
+                        <option id="book" value="{{book[0]}}">{{book[0]}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <button type="submit" class="btn btn-primary" id="submit_button">Submit</button>
+        </div>
+    </div>
+</form>
 
-  <h1>DELETE</h1>
+
 
 
 {% endblock %}

@@ -31,3 +31,14 @@ def add_book(book):
             conn.commit()
     except sqlite3.OperationalError as e:
         print("Error reading database -", e)
+
+def delete_book(name):
+    conn = sqlite3.connect("books.sqlite")
+    conn.row_factory = sqlite3.Row
+    try:
+        with closing(conn.cursor()) as c:
+            sql = "DELETE FROM Books WHERE title=?"
+            c.execute(sql, (str(name),))
+            conn.commit()
+    except sqlite3.OperationalError as e:
+        print("Error reading database -", e)

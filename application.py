@@ -30,6 +30,14 @@ def upload():
             return redirect(request.url)
     return render_template("upload.html")
 
-@app.route("/delete")
+@app.route("/delete", methods=["GET", "POST"])
 def delete():
-    return render_template("delete.html")
+    if request.method == "POST":
+        target_book = request.form.get("books")
+        print(target_book)
+        db.delete_book(str(target_book))
+    myBooks = db.get_books()
+    myList = []
+    for book in myBooks:
+        myList.append(book.break_book())
+    return render_template("delete.html", collection=myList)
