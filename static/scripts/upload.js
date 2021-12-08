@@ -7,13 +7,23 @@ const zeroErrors = () => {
 	}
 }
 
-const takePicture = (width, height) => {
+const takePicture = (width, height, photos) => {
 	const context = canvas.getContext("2d");
 	if(width && height){
+		//use js draw to create image in html canvas
 		canvas.width = width;
 		canvas.height = height;
 		context.drawImage(video, 0, 0, width, height);
+		//create the image from the drawing
+		const image = canvas.toDataURL("image/jpg");
+		const onlyImageString = image.split(",")[1];
+		console.log(onlyImageString);
+		$("#string").val(onlyImageString);
 
+		const imageTag = document.createElement('img');
+		$(imageTag).attr("src", image);
+		photos.append(imageTag);
+	
 	}
 }
 
@@ -35,31 +45,38 @@ $(document).ready( () => {
 			$("#photo_button").attr("disabled", false);
 			$("#formFile").attr("disabled", true);
 			$("#formFile").val("");
+			//delete any pre-existing images
+			let previousImages = $("#photo_container img");
+			if(previousImages.length > 0){
+				for(let image of previousImages){
+					image.remove();
+				}
+			}
+
+			//set up the video tag's source to be a user-provided stream
 			navigator.mediaDevices.getUserMedia({video: true, audio: false})
 				.then( (stream) => {
-					//link to video source
 					video.srcObject = stream;
-					//play the video
 					video.play();
 				})
 				.catch( (error) => {
 					console.log(error)
 				})
 
-				// // Play when ready
-				video.addEventListener('canplay', function(e) {
-				if(!streaming) {
-					// Set video / canvas height --> use formula for aspect ratio
-					height = video.videoHeight / (video.videoWidth / width);
+			// Play when ready
+			video.addEventListener('canplay', function(e) {
+			if(!streaming) {
+				// Set video / canvas height --> use formula for aspect ratio
+				height = video.videoHeight / (video.videoWidth / width);
 
-					$(video).attr('width', width);
-					$(video).attr('height', height);
-					$(canvas).attr('width', width);
-					$(canvas).attr('height', height);
+				$(video).attr('width', width);
+				$(video).attr('height', height);
+				$(canvas).attr('width', width);
+				$(canvas).attr('height', height);
 
-					streaming = true;
-					}
-				}, false);
+				streaming = true;
+				}
+			}, false);
 		}else{
 			$("#formFile").attr("disabled", false);
 			$("#photo_button").attr("disabled", true);
@@ -70,9 +87,7 @@ $(document).ready( () => {
 	});
 
 	$("#photo_button").click( (evt) => {
-		console.log("test");
-		takePicture(width, height);
-		evt.preventDefault();
+		takePicture(width, height, photos);
 	});
 
 	
@@ -90,14 +105,22 @@ $(document).ready( () => {
 		let inputs = $(":text");
 		let currentYear = new Date().getFullYear();
 
-		//Checking for errors/bad input
+		//Checking for empty fields
 		for(let input of inputs){
+			console.log(input);
 			if($(input).val() == ""){
 				$(input).next().text("You must fill this field");
 				isValid = false;
 			}
 		}
 
+		//Checking for no image
+		if($("#formFile").get(0).files.length == 0 && $("#photo_container img").length < 1){
+			isValid = false;
+			alert("You have not selected an image!");
+		}
+
+		//Checking for invalid inputs
 		if(isNaN(year)){
 			$("#year").next().text("This value must be an integer between 1440 and " + currentYear);
 			isValid = false;
@@ -116,6 +139,8 @@ $(document).ready( () => {
 			isValid = false;
 		}
 
+
+		//Final trigger for turning off submit
 		if(!isValid){
 			evt.preventDefault();
 		}

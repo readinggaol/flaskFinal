@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {%block scripting %} <script src="static/scripts/delete.js"></script>{% endblock%}
+{% block title %}The Collection{% endblock %}
 {% block heading %}
 {% endblock %}
 
@@ -21,10 +22,13 @@
             </div>
         </div>
         <div class="col-md-3">
-            <button type="submit" class="btn btn-primary" id="submit_button">Submit</button>
+            <button type="submit" class="btn btn-primary" id="submit_button">Delete</button>
         </div>
     </div>
 </form>
+<div id="book_info">
+
+</div>
 
 
 

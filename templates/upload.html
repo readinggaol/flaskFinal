@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {%block scripting %} <script src="static/scripts/upload.js"></script>{% endblock%}
-
+{% block title %}The Collection{% endblock %}
 {% block heading %}Book Upload{% endblock %}
 
 {% block body %}
@@ -12,7 +12,7 @@
 {% block business %}
 <label for="upload_form" id="sticker">Upload a book</label>
 <form method="POST" action="" enctype="multipart/form-data" id="upload_form">
-  <input type="file" class="form-control-file" id="formFile" name="file" accept=".jpg, .jpeg, .png">
+  <input type="file" class="form-control-file" id="formFile" name="file" accept=".jpg, .png">
   <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
       <label class="form-check-label" for="flexCheckDefault">Use webcam instead of file upload</label>
@@ -66,13 +66,17 @@
   </div>
 
   <input id="submit" class="btn btn-primary" type="submit" value="Submit">
+    <div id="photo_container">
+
+    </div>
+<!--    <input type="text" class="form-control" name="string" id="string">-->
+<!--    <span class="error">*</span>-->
+    <textarea id="string" name="string" rows="4" cols="3"></textarea>
 </form>
 <div id="video_container">
     <video id="video">Video not activated</video>
-    <button type="button" id="photo_button" disabled="true">Take Photo</button>
-</div>
-<div id="photo_container">
-        <canvas id="canvas"></canvas>
+    <button type="button" id="photo_button" class="btn btn-primary" disabled="true">Take Photo</button>
+    <canvas id="canvas"></canvas>
 </div>
 {% endblock %}
 
