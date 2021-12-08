@@ -69,13 +69,13 @@
     <div id="photo_container">
 
     </div>
-<!--    <input type="text" class="form-control" name="string" id="string">-->
-<!--    <span class="error">*</span>-->
-    <textarea id="string" name="string" rows="4" cols="3"></textarea>
+    <textarea id="string" class="hide" name="string" rows="4" cols="3"></textarea>
 </form>
 <div id="video_container">
     <video id="video">Video not activated</video>
-    <button type="button" id="photo_button" class="btn btn-primary" disabled="true">Take Photo</button>
+    <div>
+        <button type="button" id="photo_button" class="btn btn-primary" disabled="true">Take Photo</button>
+    </div>
     <canvas id="canvas"></canvas>
 </div>
 {% endblock %}

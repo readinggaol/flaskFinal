@@ -18,7 +18,7 @@ to upload or delete.
 {% block business %}
 <div id="user_form">
     <label for="login" id="sticker">User Login</label>
-    <form id="login" name="login">
+    <form method="POST" id="login" name="login">
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
@@ -29,7 +29,7 @@ to upload or delete.
                     <label for="password">Password<span class="error">*</span></label>
                     <input type="text" id="password" class="form-control" name="password" placeholder="Enter password here">
                 </div>
-                <button type="button" class="btn btn-primary" id="login_button">Submit</button>
+                <button type="submit" class="btn btn-primary" id="login_button">Submit</button>
             </div>
         </div>
 

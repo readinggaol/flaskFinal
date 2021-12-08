@@ -22,9 +22,13 @@
             <p id="current_user">{{ g.user.username }}</p>
         </div>
         <div id="body">
-            <h1>{% block heading %}{% endblock %}</h1>
+            <h1>{% block heading %}Not logged in!{% endblock %}</h1>
 
-            {% block body %}{% endblock %}
+            {% block body %}
+            <p>Only persons logged in as official collection auditors are permitted to access the upload and
+                delete pages. If you have credentials but forgot to enter them, return to the main form and
+                enter your data.
+            {% endblock %}
 
             {% block business %}{% endblock %}
         </div>

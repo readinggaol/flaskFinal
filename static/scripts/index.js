@@ -7,7 +7,7 @@ const zeroErrors = () => {
 
 
 $(document).ready( () => {
-	$("#login_button").click( () => {
+	$("#login_button").click( (evt) => {
 		let isValid = true;
 		let userName = $("#username").val();
 		let userPassword = $("#password").val();
@@ -19,6 +19,9 @@ $(document).ready( () => {
 		if(userPassword == ""){
 			$("#password").prev().children().first().text("You must fill this field.");
 			isValid = false;
+		}
+		if(!isValid){
+			evt.preventDefault();
 		}
 	});
 });

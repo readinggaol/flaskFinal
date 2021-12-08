@@ -22,3 +22,9 @@ class Book:
         broken_book.append(self.genre)
         broken_book.append("static/images/" + self.image_path)
         return broken_book
+
+class User:
+    def __init__(self, ident, username, password):
+        self.id = ident
+        self.username = username
+        self.password = password

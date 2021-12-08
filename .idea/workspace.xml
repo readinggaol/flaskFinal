@@ -5,21 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26dfe975-f561-496f-9f27-a506501cb21f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/The_Crying_of_Lot_49_pynchon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/the_bell_jar_plath.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/the_crying_of_lot_49__pynchon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/unavailable.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Book.py" beforeDir="false" afterPath="$PROJECT_DIR$/Book.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/application.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/books.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/bell.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/cthulhu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/prejudice.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/images/rainbow.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/scripts/delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/scripts/delete.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/scripts/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/scripts/upload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/scripts/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/collection.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/collection.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/upload.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
