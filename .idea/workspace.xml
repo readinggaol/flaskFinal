@@ -5,17 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26dfe975-f561-496f-9f27-a506501cb21f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/static/images/the_crying_of_lot_49__pynchon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/unavailable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/1339974157.0.m.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/41SFkF64LQL.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/81NX-69L22L.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/bell.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/count_zero.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/delusion.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/e5ee0bb0efc66de49e34fdd8c1bef35f-653x1024.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/for-whom-the-bell-tolls-9780684830483_lg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/mona_lisa_overdrive_gibson.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/name_of_wind.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/pride_&amp;_prejudice_austen.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/s-l300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/the_children_of_hurin_tolkien.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/the_fall_of_gondolin_tolkien.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/the_hobbit_tolkien.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/the_plays_of_oscar_wilde_wilde.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Book.py" beforeDir="false" afterPath="$PROJECT_DIR$/Book.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/application.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/books.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/scripts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/upload.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/the_bell_jar_plath.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/scripts/delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/scripts/delete.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

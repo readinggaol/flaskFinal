@@ -21,14 +21,7 @@ const getBookJSON = async title => {
 	let data = await response.json();
 	let workString = data.docs[0].key;
 	console.log(workString);
-
-	//remake the URLs for fetching the works data
-// 	url = worksURL + workString;
-// 	finalURL = HTMLDriven + url;
-// 	// finalURL = whateverOriginBeginning + encodeURIComponent(url);
-// 	response = await fetch(finalURL);
-// 	data = await response.json();
-// 	console.log(data);
+	
 }
 
 $(document).ready( () => {

@@ -51,7 +51,6 @@ def index():
             return redirect(request.url)
         else:
             g.user = None
-            session.pop("user_id", None)
     return render_template("index.html")
 
 
